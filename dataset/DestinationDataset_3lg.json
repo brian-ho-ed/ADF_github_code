@@ -1,0 +1,201 @@
+{
+	"name": "DestinationDataset_3lg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "testdb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "GeneratedCode",
+				"type": "String"
+			},
+			{
+				"name": "ReportedDate",
+				"type": "String"
+			},
+			{
+				"name": "ReportedTime",
+				"type": "String"
+			},
+			{
+				"name": "HospitalCode",
+				"type": "String"
+			},
+			{
+				"name": "AreaCode",
+				"type": "String"
+			},
+			{
+				"name": "Area",
+				"type": "String"
+			},
+			{
+				"name": "AssetCode",
+				"type": "String"
+			},
+			{
+				"name": "Asset",
+				"type": "String"
+			},
+			{
+				"name": "RepresentativeCode",
+				"type": "String"
+			},
+			{
+				"name": "Representative",
+				"type": "String"
+			},
+			{
+				"name": "DeviceCode",
+				"type": "String"
+			},
+			{
+				"name": "Device",
+				"type": "String"
+			},
+			{
+				"name": "TariffRM",
+				"type": "String"
+			},
+			{
+				"name": "StartOperationHour",
+				"type": "String"
+			},
+			{
+				"name": "EndOperationHour",
+				"type": "String"
+			},
+			{
+				"name": "ActualKWH",
+				"type": "Decimal"
+			},
+			{
+				"name": "ImportWh",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase1linetoneutralV",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase2linetoneutralV",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase3linetoneutralV",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase1current",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase2current",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase3current",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase1power",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase2power",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase3power",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase1voltampskVAr",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase2voltampskVAr",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase3voltampskVAr",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase1powerfactor",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase2powerfactor",
+				"type": "Decimal"
+			},
+			{
+				"name": "Phase3powerfactor",
+				"type": "Decimal"
+			},
+			{
+				"name": "TotalSystemPower",
+				"type": "Decimal"
+			},
+			{
+				"name": "TotalsystemVAkVA",
+				"type": "Decimal"
+			},
+			{
+				"name": "TotalsystemVArkVAr",
+				"type": "Decimal"
+			},
+			{
+				"name": "TotalSystemPowerFactor",
+				"type": "Decimal"
+			},
+			{
+				"name": "Frequencyofsupplyvoltage",
+				"type": "Decimal"
+			},
+			{
+				"name": "ImportVarh",
+				"type": "Decimal"
+			},
+			{
+				"name": "Totalsystempowerdemand",
+				"type": "Decimal"
+			},
+			{
+				"name": "Line1toLine2volts",
+				"type": "Decimal"
+			},
+			{
+				"name": "Line2toLine3volts",
+				"type": "Decimal"
+			},
+			{
+				"name": "Line3toLine1volts",
+				"type": "Decimal"
+			},
+			{
+				"name": "Neutralcurrent",
+				"type": "Decimal"
+			},
+			{
+				"name": "AvgelinetoneutralVTHD",
+				"type": "Decimal"
+			},
+			{
+				"name": "AveragelinecurrentTHD",
+				"type": "Decimal"
+			},
+			{
+				"name": "AvgelinetolineVTHD",
+				"type": "Decimal"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[MOH_Current]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,105 @@
+{
+	"name": "pipelineChiller4",
+	"properties": {
+		"activities": [
+			{
+				"name": "copyblobtosqlserver",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": false
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000,
+						"sqlWriterStoredProcedureName": "[dbo].[uspM1CH4Sensor]",
+						"sqlWriterTableType": "M1_CH4SensorType"
+					},
+					"enableStaging": false,
+					"parallelCopies": 1,
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"Prop_0": "Time",
+							"Prop_1": "Date",
+							"Prop_2": "SuctionPressure",
+							"Prop_3": "DischargePressure",
+							"Prop_4": "Comp1Amps",
+							"Prop_5": "Comp2Amps",
+							"Prop_6": "SystemVoltage",
+							"Prop_7": "LeavingWaterTemp",
+							"Prop_8": "LeavingWaterTempSP",
+							"Prop_9": "ChilledWaterReset",
+							"Prop_10": "Target",
+							"Prop_11": "Comp1Capacity",
+							"Prop_12": "Comp2Capacity",
+							"Prop_13": "InputComp1Starter",
+							"Prop_14": "InputComp2Starter",
+							"Prop_15": "InputComp1OilStatus",
+							"Prop_16": "InputComp2OilStatus",
+							"Prop_17": "InputRemoteEnable",
+							"Prop_18": "InputLocalEnable",
+							"Prop_19": "InputCHWFlowStatus",
+							"Prop_20": "OutputComp1ON",
+							"Prop_21": "OutputComp2ON",
+							"Prop_22": "OutputAlarm",
+							"Prop_23": "AlarmAmp1SensorFail",
+							"Prop_24": "AlarmAmp2SensorFail",
+							"Prop_25": "AlarmComp1LoOilLevel",
+							"Prop_26": "AlarmComp2LoOilLevel",
+							"Prop_27": "AlarmComp1DidNotRun",
+							"Prop_28": "AlarmComp2DidNotRun",
+							"Prop_29": "AlarmComp1DidNotStop",
+							"Prop_30": "AlarmComp2DidNotStop",
+							"Prop_31": "AlarmComp1StarterError",
+							"Prop_32": "AlarmComp2StarterError",
+							"Prop_33": "AlarmLossWaterFlow",
+							"Prop_34": "AlarmSuctSensorFail",
+							"Prop_35": "AlarmDischSensorFail",
+							"Prop_36": "AlarmHiPressOff",
+							"Prop_37": "AlarmLoPressOff",
+							"Prop_38": "AlarmDiffPressOff",
+							"Prop_39": "AlarmLWTSensorFail",
+							"Prop_40": "AlarmLWTHi",
+							"Prop_41": "AlarmLWTLo",
+							"Prop_42": "AlarmFreezeProtection",
+							"Prop_43": "AlarmPowerLoss",
+							"Prop_44": "AlarmVoltTransducerFail",
+							"Prop_45": "AlarmHiVoltSystemOff",
+							"Prop_46": "AlarmLoVoltSystemOff",
+							"Prop_47": "AlarmCHWPStarterAlarm",
+							"Prop_48": "EnableAutoRestart",
+							"Prop_49": "CHHLIState"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "blobChiller4",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "M1_CH4SensorTable",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2019-01-23T01:40:15Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

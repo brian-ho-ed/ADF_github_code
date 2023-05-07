@@ -1,0 +1,45 @@
+{
+	"name": "M1_CH1SensorTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "toSQLServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"structure": [
+			{
+				"name": "Time",
+				"type": "TimeSpan"
+			},
+			{
+				"name": "Date",
+				"type": "DateTime"
+			},
+			{
+				"name": "SuctionPressure",
+				"type": "Int32"
+			},
+			{
+				"name": "DischargePressure",
+				"type": "Int32"
+			},
+			{
+				"name": "Comp1Amps",
+				"type": "Int32"
+			},
+			{
+				"name": "Comp2Amps",
+				"type": "Int32"
+			},
+			{
+				"name": "LeavingWaterTemp",
+				"type": "Double"
+			}
+		],
+		"typeProperties": {
+			"tableName": "M1_CH1Sensor"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

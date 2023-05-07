@@ -1,0 +1,108 @@
+{
+	"name": "testcopy",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_3lg",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "backup-moh-current/data.bak"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[MOH_Current]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": false
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false,
+					"parallelCopies": 1,
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"GeneratedCode": "GeneratedCode",
+							"ReportedDate": "ReportedDate",
+							"ReportedTime": "ReportedTime",
+							"HospitalCode": "HospitalCode",
+							"AreaCode": "AreaCode",
+							"Area": "Area",
+							"AssetCode": "AssetCode",
+							"Asset": "Asset",
+							"RepresentativeCode": "RepresentativeCode",
+							"Representative": "Representative",
+							"DeviceCode": "DeviceCode",
+							"Device": "Device",
+							"TariffRM": "TariffRM",
+							"StartOperationHour": "StartOperationHour",
+							"EndOperationHour": "EndOperationHour",
+							"ActualKWH": "ActualKWH",
+							"ImportWh": "ImportWh",
+							"Phase1linetoneutralV": "Phase1linetoneutralV",
+							"Phase2linetoneutralV": "Phase2linetoneutralV",
+							"Phase3linetoneutralV": "Phase3linetoneutralV",
+							"Phase1current": "Phase1current",
+							"Phase2current": "Phase2current",
+							"Phase3current": "Phase3current",
+							"Phase1power": "Phase1power",
+							"Phase2power": "Phase2power",
+							"Phase3power": "Phase3power",
+							"Phase1voltampskVAr": "Phase1voltampskVAr",
+							"Phase2voltampskVAr": "Phase2voltampskVAr",
+							"Phase3voltampskVAr": "Phase3voltampskVAr",
+							"Phase1powerfactor": "Phase1powerfactor",
+							"Phase2powerfactor": "Phase2powerfactor",
+							"Phase3powerfactor": "Phase3powerfactor",
+							"TotalSystemPower": "TotalSystemPower",
+							"TotalsystemVAkVA": "TotalsystemVAkVA",
+							"TotalsystemVArkVAr": "TotalsystemVArkVAr",
+							"TotalSystemPowerFactor": "TotalSystemPowerFactor",
+							"Frequencyofsupplyvoltage": "Frequencyofsupplyvoltage",
+							"ImportVarh": "ImportVarh",
+							"Totalsystempowerdemand": "Totalsystempowerdemand",
+							"Line1toLine2volts": "Line1toLine2volts",
+							"Line2toLine3volts": "Line2toLine3volts",
+							"Line3toLine1volts": "Line3toLine1volts",
+							"Neutralcurrent": "Neutralcurrent",
+							"AvgelinetoneutralVTHD": "AvgelinetoneutralVTHD",
+							"AveragelinecurrentTHD": "AveragelinecurrentTHD",
+							"AvgelinetolineVTHD": "AvgelinetolineVTHD"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_3lg",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_3lg",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2019-01-29T09:05:12Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

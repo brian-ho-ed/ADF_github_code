@@ -1,0 +1,71 @@
+{
+	"name": "pipelineChiller1",
+	"properties": {
+		"activities": [
+			{
+				"name": "copyblobtosqlserver",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "chiller1/M1-CH1.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[M1_CH1Sensor]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": false
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000,
+						"sqlWriterStoredProcedureName": "[dbo].[uspM1CH1Sensor]",
+						"sqlWriterTableType": "M1_CH1SensorType"
+					},
+					"enableStaging": false,
+					"parallelCopies": 1,
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"Prop_0": "Time",
+							"Prop_1": "Date",
+							"Prop_2": "SuctionPressure",
+							"Prop_3": "DischargePressure",
+							"Prop_4": "Comp1Amps",
+							"Prop_5": "Comp2Amps",
+							"Prop_7": "LeavingWaterTemp"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "blobChiller1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "M1_CH1SensorTable",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2019-03-01T04:27:48Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

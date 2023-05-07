@@ -1,0 +1,9 @@
+{
+	"name": "Chiller1DF",
+	"location": "EastUS",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e17325e4-ab01-4ec9-a87d-c547d5954286",
+		"tenantId": "29a803eb-e7b9-4c0f-84bf-0bdc5ce02888"
+	}
+}

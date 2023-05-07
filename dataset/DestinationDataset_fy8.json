@@ -1,0 +1,25 @@
+{
+	"name": "DestinationDataset_fy8",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobBackupMOHCurrent",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "20181001-20181231.bak",
+			"folderPath": "backup-moh-current-01102018-31122018"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

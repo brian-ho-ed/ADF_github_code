@@ -1,0 +1,52 @@
+{
+	"name": "copysqltoblob",
+	"properties": {
+		"description": "Copy Data From  MOH_Current Table to Blob Storage",
+		"activities": [
+			{
+				"name": "Copy_fy8",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Destination",
+						"value": "backup-moh-current/data.bak"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource",
+						"sqlReaderQuery": "select * from MOH_Current WHERE CONVERT(Date,[ReportedDate],103) between '2018-10-01' and '2018-12-31'",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_fy8",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_fy8",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2019-10-09T09:12:27Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

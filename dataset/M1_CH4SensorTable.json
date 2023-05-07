@@ -1,0 +1,217 @@
+{
+	"name": "M1_CH4SensorTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MOHDBConnect",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "Time",
+				"type": "TimeSpan"
+			},
+			{
+				"name": "Date",
+				"type": "DateTime"
+			},
+			{
+				"name": "SuctionPressure",
+				"type": "Int32"
+			},
+			{
+				"name": "DischargePressure",
+				"type": "Int32"
+			},
+			{
+				"name": "Comp1Amps",
+				"type": "Double"
+			},
+			{
+				"name": "Comp2Amps",
+				"type": "Double"
+			},
+			{
+				"name": "SystemVoltage",
+				"type": "Double"
+			},
+			{
+				"name": "LeavingWaterTemp",
+				"type": "Double"
+			},
+			{
+				"name": "LeavingWaterTempSP",
+				"type": "Double"
+			},
+			{
+				"name": "ChilledWaterReset",
+				"type": "Double"
+			},
+			{
+				"name": "Target",
+				"type": "Double"
+			},
+			{
+				"name": "Comp1Capacity",
+				"type": "Double"
+			},
+			{
+				"name": "Comp2Capacity",
+				"type": "Double"
+			},
+			{
+				"name": "InputComp1Starter",
+				"type": "Int32"
+			},
+			{
+				"name": "InputComp2Starter",
+				"type": "Int32"
+			},
+			{
+				"name": "InputComp1OilStatus",
+				"type": "Int32"
+			},
+			{
+				"name": "InputComp2OilStatus",
+				"type": "Int32"
+			},
+			{
+				"name": "InputRemoteEnable",
+				"type": "Int32"
+			},
+			{
+				"name": "InputLocalEnable",
+				"type": "Int32"
+			},
+			{
+				"name": "InputCHWFlowStatus",
+				"type": "Int32"
+			},
+			{
+				"name": "OutputComp1ON",
+				"type": "Int32"
+			},
+			{
+				"name": "OutputComp2ON",
+				"type": "Int32"
+			},
+			{
+				"name": "OutputAlarm",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmAmp1SensorFail",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmAmp2SensorFail",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmComp1LoOilLevel",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmComp2LoOilLevel",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmComp1DidNotRun",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmComp2DidNotRun",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmComp1DidNotStop",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmComp2DidNotStop",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmComp1StarterError",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmComp2StarterError",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmLossWaterFlow",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmSuctSensorFail",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmDischSensorFail",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmHiPressOff",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmLoPressOff",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmDiffPressOff",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmLWTSensorFail",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmLWTHi",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmLWTLo",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmFreezeProtection",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmPowerLoss",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmVoltTransducerFail",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmHiVoltSystemOff",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmLoVoltSystemOff",
+				"type": "Int32"
+			},
+			{
+				"name": "AlarmCHWPStarterAlarm",
+				"type": "Int32"
+			},
+			{
+				"name": "EnableAutoRestart",
+				"type": "Int32"
+			},
+			{
+				"name": "CHHLIState",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "M1_CH4Sensor"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

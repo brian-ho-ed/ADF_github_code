@@ -1,0 +1,228 @@
+{
+	"name": "blobChiller4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RDMBlob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "Prop_0",
+				"type": "TimeSpan"
+			},
+			{
+				"name": "Prop_1",
+				"type": "DateTime",
+				"format": "dd/MM/yy"
+			},
+			{
+				"name": "Prop_2",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_3",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_4",
+				"type": "Double"
+			},
+			{
+				"name": "Prop_5",
+				"type": "Double"
+			},
+			{
+				"name": "Prop_6",
+				"type": "Double"
+			},
+			{
+				"name": "Prop_7",
+				"type": "Double"
+			},
+			{
+				"name": "Prop_8",
+				"type": "Double"
+			},
+			{
+				"name": "Prop_9",
+				"type": "Double"
+			},
+			{
+				"name": "Prop_10",
+				"type": "Double"
+			},
+			{
+				"name": "Prop_11",
+				"type": "Double"
+			},
+			{
+				"name": "Prop_12",
+				"type": "Double"
+			},
+			{
+				"name": "Prop_13",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_14",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_15",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_16",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_17",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_18",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_19",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_20",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_21",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_22",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_23",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_24",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_25",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_26",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_27",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_28",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_29",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_30",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_31",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_32",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_33",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_34",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_35",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_36",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_37",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_38",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_39",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_40",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_41",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_42",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_43",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_44",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_45",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_46",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_47",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_48",
+				"type": "Int32"
+			},
+			{
+				"name": "Prop_49",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 11,
+				"firstRowAsHeader": false
+			},
+			"fileName": "M1-CH4.csv",
+			"folderPath": "chiller4"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
